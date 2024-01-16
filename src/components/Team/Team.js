@@ -6,7 +6,7 @@ export const Team = (props) => {
     const css = {backgroundColor: props.secondColor}
 
     return (
-        <section className='team' style={css}>
+        (props.employees.length > 0) ? <section className='team' style={css}>
             <h3 style={{ borderColor: props.primaryColor }}>{props.name}</h3>
             <div className='employees'>
                 {props.employees.map( employee => {
@@ -14,5 +14,6 @@ export const Team = (props) => {
                 })}
             </div>
         </section>
+        : '' // TODO - section vazia?
     )
 }

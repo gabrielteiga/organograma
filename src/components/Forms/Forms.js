@@ -14,6 +14,10 @@ export const Forms = (props) => {
     const onSave = (event) => {
         event.preventDefault()
         props.onEmployeeCadastration({name, role, image, team})
+        setName('')
+        setRole('')
+        setImage('')
+        setTeam('')
     }
 
     return (
